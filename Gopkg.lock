@@ -261,14 +261,6 @@
   version = "v0.12.0"
 
 [[projects]]
-  branch = "master"
-  digest = "1:35d20140aeb30f9ae04b481f20020fd06c9742339a64a55c1a5a5bfddd740564"
-  name = "github.com/armon/go-proxyproto"
-  packages = ["."]
-  pruneopts = "NUT"
-  revision = "48572f11356f1843b694f21a290d4f1006bc5e47"
-
-[[projects]]
   digest = "1:bd56ffde8e12e9faca92f3ac54347c665d931856fba8784007b02e004fbcc30d"
   name = "github.com/aws/aws-sdk-go"
   packages = [
@@ -326,6 +318,14 @@
   packages = ["quantile"]
   pruneopts = "NUT"
   revision = "4c0e84591b9aa9e6dcfdf3e020114cd81f89d5f9"
+
+[[projects]]
+  branch = "master"
+  digest = "1:6fc0ac89268ff1a92f3598de7a926bb896293fc1a4e2095e4dad97ec3201c8f4"
+  name = "github.com/c0va23/go-proxyprotocol"
+  packages = ["."]
+  pruneopts = "NUT"
+  revision = "a813de8f531615a38a82d9d6313e4e6dedafa671"
 
 [[projects]]
   digest = "1:cdee563173093e5ae7ab2a19c298e0904129719e1919a3c532b7bb0c3398b818"
@@ -1288,12 +1288,12 @@
   version = "v1.0.0"
 
 [[projects]]
-  branch = "master"
   digest = "1:ad2a63b2d6dfe7d66bf14c01f1171a3951abef6e0fb136170359c3f7c4f51615"
   name = "github.com/labbsr0x/goh"
   packages = ["gohclient"]
   pruneopts = "NUT"
-  revision = "94bcf1cb07b70b26b72ad54b2b050bcd0a66a9c8"
+  revision = "b1072e96a179ebd4e11c1a64123a43213099be81"
+  version = "v1.0.1"
 
 [[projects]]
   branch = "master"
@@ -2530,7 +2530,6 @@
     "github.com/abronan/valkeyrie/store/etcd/v2",
     "github.com/abronan/valkeyrie/store/etcd/v3",
     "github.com/abronan/valkeyrie/store/zookeeper",
-    "github.com/armon/go-proxyproto",
     "github.com/aws/aws-sdk-go/aws",
     "github.com/aws/aws-sdk-go/aws/credentials",
     "github.com/aws/aws-sdk-go/aws/defaults",
@@ -2541,6 +2540,7 @@
     "github.com/aws/aws-sdk-go/service/dynamodb/dynamodbiface",
     "github.com/aws/aws-sdk-go/service/ec2",
     "github.com/aws/aws-sdk-go/service/ecs",
+    "github.com/c0va23/go-proxyprotocol",
     "github.com/cenk/backoff",
     "github.com/containous/flaeg",
     "github.com/containous/flaeg/parse",
