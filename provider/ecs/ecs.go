@@ -242,9 +242,16 @@ func (p *Provider) listInstances(ctx context.Context, client *awsClient) ([]ecsI
 					log.Errorf("Unable to describe tasks for %v", page.TaskArns)
 				} else {
 					for _, t := range resp.Tasks {
-						if aws.StringValue(t.LastStatus) == ecs.DesiredStatusRunning {
-							tasks[aws.StringValue(t.TaskArn)] = t
+						if aws.StringValue(t.LastStatus) != ecs.DesiredStatusRunning {
+							continue
 						}
+
+						if aws.StringValue(t.DesiredStatus) == ecs.DesiredStatusStopped {
+							log.Infof("Skip task %s with desired status STOPPED", aws.StringValue(t.TaskDefinitionArn))
+							continue
+						}
+
+						tasks[aws.StringValue(t.TaskArn)] = t
 					}
 				}
 			}
